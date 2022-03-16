@@ -26,9 +26,9 @@ export default function Home({ navigation }) {
       },
     };
 
-    return fetch(yelpUrl, apiOptions)
-      .then((res) => res.json())
-      .then((json) =>
+    return fetch(yelpUrl, apiOptions) // truyền link url của api vào
+      .then((res) => res.json())// res chính là response trả về
+      .then((json) =>// parse response trả về thành json
         setRestaurantData(
           json.businesses.filter((business) =>
             business.transactions.includes(activeTab.toLowerCase())
@@ -36,7 +36,7 @@ export default function Home({ navigation }) {
         )
       );
   };
-
+//useState cho phép chúng ta sử dụng state trong functional components. useEffect cho phép chúng ta sử lý logic trong lifecycle methods
   useEffect(() => {
     getRestaurantsFromYelp();
   }, [city, activeTab]);

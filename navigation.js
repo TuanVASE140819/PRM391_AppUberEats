@@ -15,7 +15,7 @@ export default function RootNavigation() {
   const screenOptions = {
     headerShown: false,
   };
-
+  //Vì provider chỉ làm cho store có thể truy cập đến những component con của nó trong khi ta muốn toàn bộ app đều có thể truy cập đến store. Vì vậy ta để component App bên trong Provider
   return (
     <ReduxProvider store={store}>
       <NavigationContainer>

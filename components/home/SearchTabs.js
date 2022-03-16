@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
-export default function HeaderTabs(props) {
+export default function SearchTabs(props) {
   return (
     <View style={{ flexDirection: "row", alignSelf: "center" }}>
       <HeaderButton
-        text="Delivery"
+        text="hollywood"
         btnColor="black"
         textColor="white"
         activeTab={props.activeTab}
         setActiveTab={props.setActiveTab}
       />
       <HeaderButton
-        text="Pickup"
+        text="Thailand"
         btnColor="white"
         textColor="black"
         activeTab={props.activeTab}
@@ -21,8 +21,7 @@ export default function HeaderTabs(props) {
     </View>
   );
 }
-//setActiveTab kiểm tra hoạt động của tab
-//props thể nhận giá trị 
+
 const HeaderButton = (props) => (
   <TouchableOpacity
     style={{

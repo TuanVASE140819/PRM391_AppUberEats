@@ -3,6 +3,10 @@ import { View, Text } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import { Button } from "react-native-elements/dist/buttons/Button";
+
+const onPressHahdler =()=>{
+}
 
 export default function SearchBar({ cityHandler }) {
   return (
@@ -52,6 +56,12 @@ export default function SearchBar({ cityHandler }) {
               style={{ marginRight: 6 }}
             />
             <Text>Search</Text>
+            {/* <Button 
+            title={VietNam}
+            onPress={()=>{}}
+            >
+              
+            </Button> */}
           </View>
         )}
       />
